@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://bg0c3tqpjevpv"]
+
+[ext_resource type="PackedScene" uid="uid://db0307fnpbaph" path="res://Jugador/Jugador.tscn" id="1_f2v57"]
+[ext_resource type="PackedScene" uid="uid://dx1fixaeif668" path="res://ParedDebug/ParedDebug.tscn" id="3_q58qo"]
+
+[node name="Partida" type="Node2D"]
+
+[node name="Camara" type="Camera2D" parent="."]
+
+[node name="Jugador" parent="." instance=ExtResource("1_f2v57")]
+position = Vector2(-469, 182)
+
+[node name="ParedDebug1" parent="." instance=ExtResource("3_q58qo")]
+position = Vector2(-619, -29)
+scale = Vector2(4.21753, 44.3453)
+
+[node name="ParedDebug2" parent="." instance=ExtResource("3_q58qo")]
+position = Vector2(4, -355)
+scale = Vector2(69.9358, 3.23884)
+vertical = true
+
+[node name="ParedDebug3" parent="." instance=ExtResource("3_q58qo")]
+position = Vector2(319, -4)
+scale = Vector2(3.28, 36.5964)
+
+[node name="ParedDebug4" parent="." instance=ExtResource("3_q58qo")]
+position = Vector2(6, 369)
+scale = Vector2(66.64, 4.52)
+vertical = true

@@ -1,0 +1,56 @@
+[gd_scene load_steps=9 format=3 uid="uid://db0307fnpbaph"]
+
+[ext_resource type="Script" path="res://Jugador/Jugador.gd" id="1_77o27"]
+[ext_resource type="Texture2D" uid="uid://bjf5ykkj6rlym" path="res://Jugador/Sprites/Jugador.png" id="2_4hdb2"]
+[ext_resource type="Script" path="res://Jugador/AreaGolpe.gd" id="3_63dvr"]
+[ext_resource type="Script" path="res://Jugador/AreaGolpeTirandose.gd" id="4_pwpq1"]
+[ext_resource type="Texture2D" uid="uid://b4n6mu7vl5cqo" path="res://Jugador/Sprites/Flecha.png" id="5_ej2ql"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1uble"]
+radius = 33.1361
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4pa5f"]
+radius = 54.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cln05"]
+radius = 54.037
+
+[node name="Jugador" type="CharacterBody2D"]
+motion_mode = 1
+script = ExtResource("1_77o27")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_4hdb2")
+
+[node name="Hitbox" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_1uble")
+
+[node name="AreaGolpe" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 4
+script = ExtResource("3_63dvr")
+
+[node name="Hitbox" type="CollisionShape2D" parent="AreaGolpe"]
+shape = SubResource("CircleShape2D_4pa5f")
+
+[node name="Sprite" type="Sprite2D" parent="AreaGolpe"]
+modulate = Color(1, 1, 1, 0.188235)
+position = Vector2(3.57628e-07, 4.17233e-07)
+scale = Vector2(1.64063, 1.64063)
+texture = ExtResource("2_4hdb2")
+
+[node name="AreaGolpeTirandose" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 4
+script = ExtResource("4_pwpq1")
+
+[node name="Hitbox" type="CollisionShape2D" parent="AreaGolpeTirandose"]
+shape = SubResource("CircleShape2D_cln05")
+
+[node name="PuntoDeRotacion" type="Node2D" parent="."]
+
+[node name="Flecha" type="Sprite2D" parent="PuntoDeRotacion"]
+position = Vector2(67, -0.520279)
+rotation = -1.5708
+scale = Vector2(1.01626, 1)
+texture = ExtResource("5_ej2ql")

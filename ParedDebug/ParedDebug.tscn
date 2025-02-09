@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://dx1fixaeif668"]
+
+[ext_resource type="Script" path="res://ParedDebug/ParedDebug.gd" id="1_kdgv7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0b2ut"]
+
+[node name="ParedDebug" type="Area2D"]
+collision_layer = 2
+collision_mask = 4
+script = ExtResource("1_kdgv7")
+
+[node name="Hitbox" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_0b2ut")
