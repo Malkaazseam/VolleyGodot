@@ -1,7 +1,9 @@
 extends Area2D
 
-const DISTANCIA: float = 25
-const FUERZA_GOLPE: float = 7
+const DISTANCIA: float = 15
+const FUERZA_GOLPE: float = 12
+const RAPIDEZ_VERTICAL: float = 600
+const ALTURA_VALIDA: float = 50
 
 const SEGUNDOS_PEGANDO: float = 0.20
 var segundosRestantes: float
@@ -53,8 +55,9 @@ func pegar():
 func _golpear():
 	if has_overlapping_bodies():
 			for body in get_overlapping_bodies():
-				if body is Pelota:
+				if body is Pelota and body.altura <= ALTURA_VALIDA:
 					body.direccion = (body.global_position - global_position).normalized() * FUERZA_GOLPE
+					body.rapidezVertical = RAPIDEZ_VERTICAL
 					segundosRestantes = 0
 					$Sprite.visible = false
 					break

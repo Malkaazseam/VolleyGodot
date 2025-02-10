@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bvo01qa663btd"]
+[gd_scene load_steps=8 format=3 uid="uid://bvo01qa663btd"]
 
 [ext_resource type="Texture2D" uid="uid://c6vog2wesaqhl" path="res://Pelota/Sprites/Pelota.png" id="1_uh6sq"]
 [ext_resource type="Script" path="res://Pelota/PelotaDebug.gd" id="1_ukpnc"]
@@ -10,6 +10,14 @@ friction = 0.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4x6p0"]
 radius = 16.0
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_vjqng"]
+properties/0/path = NodePath(".:position")
+properties/0/spawn = true
+properties/0/replication_mode = 1
+properties/1/path = NodePath(".:altura")
+properties/1/spawn = true
+properties/1/replication_mode = 1
 
 [node name="Pelota" type="RigidBody2D"]
 collision_layer = 4
@@ -31,3 +39,6 @@ script = ExtResource("3_t7w65")
 
 [node name="Hitbox" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_4x6p0")
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_vjqng")

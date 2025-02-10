@@ -10,7 +10,7 @@ const ALTURA_INICIAL: float = 0
 const ALTURA_MAXIMA: float = 100
 var altura: float
 var rapidezVertical: float
-const GRAVEDAD: float = 10
+const GRAVEDAD: float = 750
 
 func _ready():
 	altura = ALTURA_INICIAL
@@ -26,6 +26,14 @@ func _physics_process(delta: float) -> void:
 		var velocidad = direccion * RAPIDEZ * delta
 		move_and_collide(Vector2(velocidad.x, 0))
 		move_and_collide(Vector2(0, velocidad.y))
+		
+	altura += rapidezVertical * delta
+	rapidezVertical -= GRAVEDAD * delta
+	
+	if altura <= 0:
+		altura = 0
+		rapidezVertical *= -0.7
+		direccion *= 0.7
 
 func _input(event):
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
