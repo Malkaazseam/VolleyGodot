@@ -57,6 +57,7 @@ func _empezarPartida():
 func actualizarInformacionJugadores(id):
 	var jugadorNuevo = load("res://Jugador/Jugador.tscn").instantiate()
 	Jugadores.jugadores[id] = {
+		"nombre" : "",
 		"jugador" : jugadorNuevo
 	}
 

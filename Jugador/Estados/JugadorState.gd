@@ -10,4 +10,7 @@ func process(delta):
 
 func input(event: InputEvent):
 	if event.is_action_pressed("Pegar"):
-		jugador.areaGolpe.pegar()
+		if jugador.multiplayer.is_server():
+			jugador.areaGolpe.pegar()
+		else:
+			jugador.areaGolpe.pegar.rpc_id(1)

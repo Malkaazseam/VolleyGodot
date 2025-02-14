@@ -1,0 +1,236 @@
+[gd_scene load_steps=7 format=3 uid="uid://bqe15hgcurmm8"]
+
+[ext_resource type="Script" path="res://Menues/Host/Host.gd" id="1_d50ku"]
+[ext_resource type="Texture2D" uid="uid://bjf5ykkj6rlym" path="res://Jugador/Sprites/Jugador.png" id="2_7a7gt"]
+[ext_resource type="Script" path="res://Menues/Host/JugadorDrag.gd" id="2_wylfw"]
+[ext_resource type="Script" path="res://Menues/Host/SlotSinAsignar.gd" id="3_5rwbj"]
+[ext_resource type="Script" path="res://Menues/Host/SlotDropEquipo.gd" id="4_5hhf1"]
+[ext_resource type="Texture2D" uid="uid://c6vog2wesaqhl" path="res://Pelota/Sprites/Pelota.png" id="4_6lhi0"]
+
+[node name="Host" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -768.0
+offset_bottom = -432.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(3, 3)
+script = ExtResource("1_d50ku")
+
+[node name="Nombre" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 6.0
+offset_right = 120.0
+offset_bottom = 37.0
+text = "Namakeru"
+placeholder_text = "Nombre"
+
+[node name="Puerto" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 267.0
+offset_top = 7.0
+offset_right = 378.0
+offset_bottom = 38.0
+text = "135"
+placeholder_text = "Puerto"
+
+[node name="Host" type="Button" parent="."]
+layout_mode = 0
+offset_left = 46.0
+offset_top = 179.0
+offset_right = 121.0
+offset_bottom = 210.0
+text = "Host"
+
+[node name="Atras" type="Button" parent="."]
+layout_mode = 0
+offset_left = 266.0
+offset_top = 179.0
+offset_right = 341.0
+offset_bottom = 210.0
+text = "Atras"
+
+[node name="Comenzar" type="Button" parent="."]
+layout_mode = 0
+offset_left = 151.0
+offset_top = 179.0
+offset_right = 238.0
+offset_bottom = 210.0
+text = "Comenzar"
+
+[node name="SlotSinAsignar1" type="TextureRect" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 169.0
+offset_top = 36.0
+offset_right = 233.0
+offset_bottom = 100.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_6lhi0")
+script = ExtResource("3_5rwbj")
+jugador = 1
+
+[node name="Jugador1" type="TextureRect" parent="SlotSinAsignar1"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 9.0
+offset_top = 9.0
+offset_right = 73.0
+offset_bottom = 73.0
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("2_7a7gt")
+script = ExtResource("2_wylfw")
+jugador = 1
+
+[node name="Nombre" type="Label" parent="SlotSinAsignar1/Jugador1"]
+layout_mode = 0
+offset_left = 102.0
+offset_top = 18.0
+offset_right = 176.0
+offset_bottom = 41.0
+text = "Jugador 1"
+
+[node name="SlotSinAsignar2" type="TextureRect" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 168.0
+offset_top = 70.0
+offset_right = 232.0
+offset_bottom = 134.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_6lhi0")
+script = ExtResource("3_5rwbj")
+jugador = 2
+
+[node name="Jugador2" type="TextureRect" parent="SlotSinAsignar2"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 9.0
+offset_top = 9.0
+offset_right = 73.0
+offset_bottom = 73.0
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("2_7a7gt")
+script = ExtResource("2_wylfw")
+jugador = 2
+
+[node name="Nombre" type="Label" parent="SlotSinAsignar2/Jugador2"]
+layout_mode = 0
+offset_left = 102.0
+offset_top = 18.0
+offset_right = 171.0
+offset_bottom = 41.0
+text = "Jugador2"
+
+[node name="SlotSinAsignar3" type="TextureRect" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 169.0
+offset_top = 103.0
+offset_right = 233.0
+offset_bottom = 167.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_6lhi0")
+script = ExtResource("3_5rwbj")
+jugador = 3
+
+[node name="Jugador3" type="TextureRect" parent="SlotSinAsignar3"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 9.0
+offset_top = 9.0
+offset_right = 73.0
+offset_bottom = 73.0
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("2_7a7gt")
+script = ExtResource("2_wylfw")
+jugador = 3
+
+[node name="Nombre" type="Label" parent="SlotSinAsignar3/Jugador3"]
+layout_mode = 0
+offset_left = 102.0
+offset_top = 22.0
+offset_right = 171.0
+offset_bottom = 45.0
+text = "Jugador3"
+
+[node name="SlotSinAsignar4" type="TextureRect" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 169.0
+offset_top = 138.0
+offset_right = 233.0
+offset_bottom = 202.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_6lhi0")
+script = ExtResource("3_5rwbj")
+jugador = 4
+
+[node name="Jugador4" type="TextureRect" parent="SlotSinAsignar4"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 9.0
+offset_top = 9.0
+offset_right = 73.0
+offset_bottom = 73.0
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("2_7a7gt")
+script = ExtResource("2_wylfw")
+jugador = 4
+
+[node name="Nombre" type="Label" parent="SlotSinAsignar4/Jugador4"]
+layout_mode = 0
+offset_left = 98.0
+offset_top = 22.0
+offset_right = 167.0
+offset_bottom = 45.0
+text = "Jugador4"
+
+[node name="Slot1Izquierdo" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 66.0
+offset_top = 65.0
+offset_right = 106.0
+offset_bottom = 105.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_6lhi0")
+script = ExtResource("4_5hhf1")
+equipo = 2
+posicion = 1
+
+[node name="Slot2Izquierdo" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 117.0
+offset_right = 104.0
+offset_bottom = 157.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_6lhi0")
+script = ExtResource("4_5hhf1")
+equipo = 2
+posicion = 2
+
+[node name="Slot1Derecho" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 274.0
+offset_top = 64.0
+offset_right = 338.0
+offset_bottom = 128.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_6lhi0")
+script = ExtResource("4_5hhf1")
+posicion = 3
+
+[node name="Slot2Derecho" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 273.0
+offset_top = 115.0
+offset_right = 313.0
+offset_bottom = 155.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_6lhi0")
+script = ExtResource("4_5hhf1")
+posicion = 4

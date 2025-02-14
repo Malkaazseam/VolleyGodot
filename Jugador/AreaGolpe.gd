@@ -2,7 +2,7 @@ extends Area2D
 
 const DISTANCIA: float = 15
 const FUERZA_GOLPE: float = 12
-const RAPIDEZ_VERTICAL: float = 600
+const RAPIDEZ_VERTICAL: float = 500
 const ALTURA_VALIDA: float = 50
 
 const SEGUNDOS_PEGANDO: float = 0.20
@@ -43,6 +43,7 @@ func _process(delta):
 		if pego:
 			pegar()
 
+@rpc("authority", "call_remote")
 func pegar():
 	if not pegando and not cooldown:
 		pego = false
@@ -58,6 +59,7 @@ func _golpear():
 				if body is Pelota and body.altura <= ALTURA_VALIDA:
 					body.direccion = (body.global_position - global_position).normalized() * FUERZA_GOLPE
 					body.rapidezVertical = RAPIDEZ_VERTICAL
+					body.setUltimoToque(get_parent().equipo)
 					segundosRestantes = 0
 					$Sprite.visible = false
 					break

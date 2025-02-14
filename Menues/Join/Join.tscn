@@ -1,0 +1,99 @@
+[gd_scene load_steps=2 format=3 uid="uid://bnwwtx36avnfn"]
+
+[ext_resource type="Script" path="res://Menues/Join/Join.gd" id="1_d6f6t"]
+
+[node name="Join" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_d6f6t")
+
+[node name="Camara" type="Camera2D" parent="."]
+position = Vector2(192, 108)
+zoom = Vector2(3, 3)
+
+[node name="Nombre" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 17.0
+offset_right = 127.0
+offset_bottom = 48.0
+text = "Malkaaz"
+placeholder_text = "Nombre"
+
+[node name="IP" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 137.0
+offset_top = 17.0
+offset_right = 248.0
+offset_bottom = 48.0
+text = "127.0.0.1"
+placeholder_text = "Dirección ip"
+
+[node name="Puerto" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 258.0
+offset_top = 17.0
+offset_right = 369.0
+offset_bottom = 48.0
+text = "135"
+placeholder_text = "Puerto"
+
+[node name="Join" type="Button" parent="."]
+layout_mode = 0
+offset_left = 46.0
+offset_top = 165.0
+offset_right = 121.0
+offset_bottom = 196.0
+text = "Join"
+
+[node name="Atras" type="Button" parent="."]
+layout_mode = 0
+offset_left = 266.0
+offset_top = 165.0
+offset_right = 341.0
+offset_bottom = 196.0
+text = "Atras"
+
+[node name="EsperandoJugadores" type="Label" parent="."]
+layout_mode = 0
+offset_left = 90.0
+offset_top = 57.0
+offset_right = 302.0
+offset_bottom = 80.0
+text = "Esperando jugadores..."
+
+[node name="Jugador1" type="Label" parent="."]
+layout_mode = 0
+offset_left = 41.0
+offset_top = 101.0
+offset_right = 191.0
+offset_bottom = 124.0
+text = "Jugador1"
+
+[node name="Jugador2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 219.0
+offset_top = 101.0
+offset_right = 369.0
+offset_bottom = 124.0
+text = "Jugador2"
+
+[node name="Jugador3" type="Label" parent="."]
+layout_mode = 0
+offset_left = 41.0
+offset_top = 130.0
+offset_right = 191.0
+offset_bottom = 153.0
+text = "Jugador3"
+
+[node name="Jugador4" type="Label" parent="."]
+layout_mode = 0
+offset_left = 219.0
+offset_top = 130.0
+offset_right = 369.0
+offset_bottom = 153.0
+text = "Jugador4"

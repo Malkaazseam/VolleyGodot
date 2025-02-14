@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://bol53ogv4e42x"]
+
+[ext_resource type="Script" path="res://Red/AreaReboteRed.gd" id="1_rpw3s"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3ocjl"]
+size = Vector2(20, 100)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ctd65"]
+size = Vector2(20, 100)
+
+[node name="Red" type="StaticBody2D"]
+collision_layer = 16
+
+[node name="Hitbox" type="CollisionShape2D" parent="."]
+scale = Vector2(1, 6.68)
+shape = SubResource("RectangleShape2D_3ocjl")
+
+[node name="AreaReboteRed" type="Area2D" parent="."]
+collision_layer = 32
+collision_mask = 4
+script = ExtResource("1_rpw3s")
+
+[node name="Hitbox" type="CollisionShape2D" parent="AreaReboteRed"]
+scale = Vector2(1, 6.68)
+shape = SubResource("RectangleShape2D_ctd65")

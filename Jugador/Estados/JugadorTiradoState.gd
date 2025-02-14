@@ -6,7 +6,10 @@ var segundosRestantes: float
 func _init(jugadorNuevo):
 	super(jugadorNuevo)
 	
-	jugador.areaGolpeTirandose.pegar()
+	if jugador.multiplayer.is_server():
+		jugador.areaGolpeTirandose.pegar()
+	else:
+		jugador.areaGolpeTirandose.pegar.rpc_id(1)
 	segundosRestantes = SEGUNDOS_TIRADO
 	
 func process(delta):

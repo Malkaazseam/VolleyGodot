@@ -1,0 +1,150 @@
+[gd_scene load_steps=7 format=3 uid="uid://whyvd2jqtnlq"]
+
+[ext_resource type="Script" path="res://Menues/Host2Jugadores/Host2Jugadores.gd" id="1_5ch8p"]
+[ext_resource type="Texture2D" uid="uid://c6vog2wesaqhl" path="res://Pelota/Sprites/Pelota.png" id="2_mmmg3"]
+[ext_resource type="Script" path="res://Menues/Host/SlotSinAsignar.gd" id="3_ow3tg"]
+[ext_resource type="Texture2D" uid="uid://bjf5ykkj6rlym" path="res://Jugador/Sprites/Jugador.png" id="4_6leim"]
+[ext_resource type="Script" path="res://Menues/Host/JugadorDrag.gd" id="5_ptdmc"]
+[ext_resource type="Script" path="res://Menues/Host/SlotDropEquipo.gd" id="6_qvasx"]
+
+[node name="Host" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -768.0
+offset_bottom = -432.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(3, 3)
+script = ExtResource("1_5ch8p")
+
+[node name="Nombre" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 6.0
+offset_right = 120.0
+offset_bottom = 37.0
+text = "Namakeru"
+placeholder_text = "Nombre"
+
+[node name="Puerto" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 267.0
+offset_top = 7.0
+offset_right = 378.0
+offset_bottom = 38.0
+text = "135"
+placeholder_text = "Puerto"
+
+[node name="Host" type="Button" parent="."]
+layout_mode = 0
+offset_left = 46.0
+offset_top = 179.0
+offset_right = 121.0
+offset_bottom = 210.0
+text = "Host"
+
+[node name="Atras" type="Button" parent="."]
+layout_mode = 0
+offset_left = 266.0
+offset_top = 179.0
+offset_right = 341.0
+offset_bottom = 210.0
+text = "Atras"
+
+[node name="Comenzar" type="Button" parent="."]
+layout_mode = 0
+offset_left = 151.0
+offset_top = 179.0
+offset_right = 238.0
+offset_bottom = 210.0
+text = "Comenzar"
+
+[node name="SlotSinAsignar1" type="TextureRect" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 174.667
+offset_top = 74.0
+offset_right = 238.667
+offset_bottom = 138.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_mmmg3")
+script = ExtResource("3_ow3tg")
+jugador = 1
+
+[node name="Jugador1" type="TextureRect" parent="SlotSinAsignar1"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 9.0
+offset_top = 9.0
+offset_right = 73.0
+offset_bottom = 73.0
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("4_6leim")
+script = ExtResource("5_ptdmc")
+jugador = 1
+
+[node name="Nombre" type="Label" parent="SlotSinAsignar1/Jugador1"]
+layout_mode = 0
+offset_left = 102.0
+offset_top = 18.0
+offset_right = 176.0
+offset_bottom = 41.0
+text = "Jugador 1"
+
+[node name="SlotSinAsignar2" type="TextureRect" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 173.667
+offset_top = 108.0
+offset_right = 237.667
+offset_bottom = 172.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_mmmg3")
+script = ExtResource("3_ow3tg")
+jugador = 2
+
+[node name="Jugador2" type="TextureRect" parent="SlotSinAsignar2"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 9.0
+offset_top = 9.0
+offset_right = 73.0
+offset_bottom = 73.0
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("4_6leim")
+script = ExtResource("5_ptdmc")
+jugador = 2
+
+[node name="Nombre" type="Label" parent="SlotSinAsignar2/Jugador2"]
+layout_mode = 0
+offset_left = 102.0
+offset_top = 18.0
+offset_right = 171.0
+offset_bottom = 41.0
+text = "Jugador2"
+
+[node name="Slot1Izquierdo" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 72.3333
+offset_top = 91.3333
+offset_right = 136.333
+offset_bottom = 155.333
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_mmmg3")
+script = ExtResource("6_qvasx")
+equipo = 2
+posicion = 1
+
+[node name="Slot1Derecho" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 280.333
+offset_top = 90.3333
+offset_right = 344.333
+offset_bottom = 154.333
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_mmmg3")
+script = ExtResource("6_qvasx")
+equipo = 1
+posicion = 2

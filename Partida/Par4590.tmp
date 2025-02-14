@@ -1,7 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://bg0c3tqpjevpv"]
+[gd_scene load_steps=3 format=3 uid="uid://bg0c3tqpjevpv"]
 
 [ext_resource type="PackedScene" uid="uid://db0307fnpbaph" path="res://Jugador/Jugador.tscn" id="1_f2v57"]
-[ext_resource type="PackedScene" uid="uid://bol53ogv4e42x" path="res://Red/Red.tscn" id="3_5o6h3"]
 [ext_resource type="PackedScene" uid="uid://dx1fixaeif668" path="res://ParedDebug/ParedDebug.tscn" id="3_q58qo"]
 
 [node name="Partida" type="Node2D"]
@@ -29,6 +28,3 @@ scale = Vector2(3.28, 36.5964)
 position = Vector2(6, 369)
 scale = Vector2(66.64, 4.52)
 vertical = true
-
-[node name="Red" parent="." instance=ExtResource("3_5o6h3")]
-position = Vector2(0, -22)

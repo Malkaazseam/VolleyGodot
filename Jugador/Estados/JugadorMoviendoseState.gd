@@ -11,8 +11,12 @@ func process(delta):
 		var velocidad = jugador.direccion * jugador.RAPIDEZ_MOVIENDOSE * delta
 		jugador.move_and_collide(Vector2(velocidad.x, 0))
 		jugador.move_and_collide(Vector2(0, velocidad.y))
+		
+		jugador.syncPosition = jugador.position
 
 func input(event):
 	super(event)
 	if event.is_action_pressed("Tirarse"):
 		jugador.cambiarEstadoTirandose()
+	elif event.is_action_pressed("Saltar"):
+		jugador.cambiarEstadoSaltando()

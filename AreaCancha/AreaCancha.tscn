@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://bgom0ihk5vth8"]
+
+[ext_resource type="Script" path="res://AreaCancha/AreaCancha.gd" id="1_qb7q3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_glnol"]
+
+[node name="AreaCancha" type="Area2D"]
+collision_layer = 8
+collision_mask = 4
+script = ExtResource("1_qb7q3")
+
+[node name="Hitbox" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_glnol")

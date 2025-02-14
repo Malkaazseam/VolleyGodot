@@ -11,6 +11,7 @@ func _init(jugadorNuevo):
 	
 	pelota = load("res://Pelota/Pelota.tscn").instantiate()
 	pelota.position = jugador.position
+	pelota.syncPosition = jugador.position
 	pelota.name = "Pelota"
 	jugador.get_parent().add_child.call_deferred(pelota, true)
 	
@@ -29,5 +30,6 @@ func input(event: InputEvent):
 		#esto va a ser asi hasta que le ponga que cargue la fuerza del saque
 		pelota.direccion = Vector2.RIGHT.rotated(jugador.flechaSaque.rotation) * jugador.FUERZA_SAQUE
 		pelota.rapidezVertical = jugador.RAPIDEZ_VERTICAL_SAQUE
+		pelota.sacada = true
 		jugador.flechaSaque.visible = false
 		jugador.cambiarEstadoInactivo()

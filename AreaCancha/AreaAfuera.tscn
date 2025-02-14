@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dnae2r51ogkta"]
+
+[ext_resource type="Script" path="res://AreaCancha/AreaAfuera.gd" id="1_bwq4m"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b4h61"]
+
+[node name="AreaAfuera" type="Area2D"]
+script = ExtResource("1_bwq4m")
+
+[node name="Hitbox" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_b4h61")

@@ -10,3 +10,5 @@ func process(delta):
 
 func input(event):
 	super(event)
+	if event.is_action_pressed("Saltar"):
+		jugador.cambiarEstadoSaltando()

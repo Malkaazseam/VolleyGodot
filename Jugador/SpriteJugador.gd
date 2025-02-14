@@ -1,4 +1,4 @@
-class_name SpritePelota extends Sprite2D
+class_name SpriteJugador extends Sprite2D
 
 @export var syncPosition: float
 
