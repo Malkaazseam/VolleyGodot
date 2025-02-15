@@ -59,6 +59,9 @@ func _physics_process(delta: float) -> void:
 						for area in areaPuntaje.get_overlapping_areas():
 							if area is AreaCancha:
 								area.sumarPunto()
+							elif area is AreaAfuera:
+								area.sumarPunto(self)
+							break
 		syncPosition = position
 	else:
 		position = position.lerp(syncPosition, 0.5)

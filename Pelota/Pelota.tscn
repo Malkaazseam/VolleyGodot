@@ -48,6 +48,12 @@ scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_uh6sq")
 script = ExtResource("3_t7w65")
 
+[node name="Label" type="Label" parent="SpritePelota"]
+offset_left = -18.0
+offset_top = -60.0
+offset_right = 22.0
+offset_bottom = -37.0
+
 [node name="Hitbox" type="CollisionShape2D" parent="."]
 position = Vector2(0, 8)
 shape = SubResource("CircleShape2D_4x6p0")
@@ -71,9 +77,3 @@ process_material = SubResource("ParticleProcessMaterial_7y1yi")
 one_shot = true
 speed_scale = 2.0
 explosiveness = 1.0
-
-[node name="Label" type="Label" parent="."]
-offset_left = -9.0
-offset_top = -6.0
-offset_right = 31.0
-offset_bottom = 17.0

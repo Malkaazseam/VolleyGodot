@@ -31,5 +31,6 @@ func input(event: InputEvent):
 		pelota.direccion = Vector2.RIGHT.rotated(jugador.flechaSaque.rotation) * jugador.FUERZA_SAQUE
 		pelota.rapidezVertical = jugador.RAPIDEZ_VERTICAL_SAQUE
 		pelota.sacada = true
+		pelota.ultimoToque = jugador.equipo
 		jugador.flechaSaque.visible = false
 		jugador.cambiarEstadoInactivo()

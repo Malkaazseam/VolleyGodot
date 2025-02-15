@@ -10,7 +10,8 @@ func _ready():
 				jugadorNuevo.position = get_node("Spawn" + str(Jugadores.jugadores[id]["posicion"])).position
 			else:
 				jugadorNuevo.position = get_node("Spawn" + str(Jugadores.jugadores[id]["posicion"] + 4)).position
-			jugadorNuevo.name = str(id)
+			
+			jugadorNuevo.equipo = Jugadores.jugadores[id]["equipo"]
 			if id == 1:
 				jugadorNuevo.sacando = true
 			add_child(jugadorNuevo, true)
